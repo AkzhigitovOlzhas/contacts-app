@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Text } from "rebass";
+import { Box } from "rebass";
 import CardContact from "./CardContact";
 
 function Contacts() {
@@ -8,7 +8,7 @@ function Contacts() {
       <div style={{ width: "80%", margin: "auto" }}>
         <Box
           style={{ marginTop: "20px" }}
-          sx={{ 
+          sx={{
             display: "grid",
             gridGap: 4,
             gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
