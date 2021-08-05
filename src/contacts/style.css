@@ -1,0 +1,45 @@
+.contact_form {
+  margin-left: 70px;
+  margin-top: 30px;
+}
+.contact_image {
+  width: 230px;
+  border-radius: 10px;
+}
+.contact_like {
+  width: 70px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+.fields {
+  display: flex;
+  margin-top: 20px;
+}
+
+.left {
+  margin-right: 50px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  color: gray;
+  padding-top: 10px;
+}
+.field {
+  color: gray;
+  font-weight: bold;
+  height: 30px;
+}
+.submit_btn {
+  height: 35px;
+  border: none;
+  background: #000;
+  color: #fff;
+  margin-top: 17px;
+  cursor: pointer;
+}
+.error {
+  color: red;
+} 
