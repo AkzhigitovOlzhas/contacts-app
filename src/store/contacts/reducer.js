@@ -1,13 +1,15 @@
 import { contactsActionsTypes } from "./actions";
 
-function requestInitialState() { 
-  fetch("https://my-json-server.typicode.com/RomanChasovitin/demo-api/users")
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      localStorage.setItem("contacts", JSON.stringify(data.data));
-    });
+function requestInitialState() {
+  if (!localStorage.getItem("contacts")) {
+    fetch("https://my-json-server.typicode.com/RomanChasovitin/demo-api/users")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        localStorage.setItem("contacts", JSON.stringify(data.data));
+      });
+  }
   return JSON.parse(localStorage.getItem("contacts"));
 }
 

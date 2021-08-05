@@ -62,7 +62,7 @@ function ContactForm() {
     }
     return errors;
   }
-  function handleSetLike() { 
+  function handleSetLike() {
     if (like) {
       setLike(!like);
       return;
@@ -78,7 +78,7 @@ function ContactForm() {
         initialValues={init()}
         validate={validate}
         onSubmit={(values, { setSubmitting }) => {
-          let contacts = JSON.parse(localStorage.getItem("contacts"));
+          let contacts = JSON.parse(localStorage.getItem("contacts")); 
           for (let i = 0; i < contacts.length; i++) {
             if (+contacts[i].id === +id) {
               contacts[i] = {
@@ -89,7 +89,7 @@ function ContactForm() {
               };
               break;
             }
-          }
+          } 
           localStorage.setItem("contacts", JSON.stringify(contacts));
           dispatch(contactsActions.setContacts(contacts));
           history.push("/");
